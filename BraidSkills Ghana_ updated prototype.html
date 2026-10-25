@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BraidSkills Ghana: Skills that open doors</title>
+<style>
+:root{--bg:#FFFAEE;--text:#1B2B24;--muted:#5B6B63;--card:#FFFFFF;--green:#215A47;--dark:#183029;--lime:#D9EE9A;--tint:#EDF5EA;--pink:#F3B09E;--gold:#F2A900;--line:#E4DFCF;--ondark:#FFFFFF;--onbtn:#FFFFFF;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101C17;--text:#F1EFE4;--muted:#B4C0B8;--card:#18281F;--green:#7CC7A4;--dark:#0A130F;--tint:#16251D;--line:#2A3D33;--onbtn:#0A130F;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#101C17;--text:#F1EFE4;--muted:#B4C0B8;--card:#18281F;--green:#7CC7A4;--dark:#0A130F;--tint:#16251D;--line:#2A3D33;--onbtn:#0A130F;color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.top{background:var(--dark);color:#fff;text-align:center;font-size:13px;padding:6px 10px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 20px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo i{width:38px;height:38px;border-radius:10px;background:var(--lime);color:#183029;display:grid;place-items:center;font-style:normal;font-size:20px}
+.logo b{display:block;font-size:16px}.logo small{display:block;font-size:10px;letter-spacing:.08em;color:var(--muted)}
+nav{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+nav a{text-decoration:none;font-weight:700;font-size:14px}
+.btn{display:inline-block;background:var(--green);color:var(--onbtn);border:2px solid var(--green);border-radius:10px;padding:11px 18px;font-weight:700;font-size:15px;cursor:pointer;text-decoration:none;font-family:inherit}
+.btn.out{background:transparent;color:var(--green)}
+.btn.lime{background:var(--lime);border-color:var(--lime);color:#183029}
+.pill{display:inline-block;background:var(--tint);color:var(--green);font-weight:700;font-size:13px;padding:6px 14px;border-radius:99px}
+.new{display:inline-block;background:var(--gold);color:#1B2B24;font-size:11px;font-weight:700;padding:2px 8px;border-radius:99px;margin-left:6px;vertical-align:middle}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;padding:48px 20px}
+h1{font-size:clamp(36px,6vw,64px);line-height:1.02;letter-spacing:-.03em;margin:18px 0}
+h1 span{color:var(--green)}
+.hero p{color:var(--muted);font-size:17px;max-width:520px}
+.row{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 10px}
+.small{font-size:14px;color:var(--muted)}
+.art{background:var(--lime);border-radius:26px;padding:34px;position:relative;overflow:hidden;min-height:300px;display:flex;align-items:center;justify-content:center}
+.art:before{content:"";position:absolute;top:-30px;right:-30px;width:150px;height:150px;border-radius:50%;background:var(--pink)}
+.arch{position:relative;background:linear-gradient(160deg,#215A47,#183029);color:#fff;border-radius:120px 120px 20px 20px;padding:50px 24px 24px;text-align:center;width:100%;max-width:320px}
+.arch h3{margin:0 0 6px;font-size:22px}.arch p{margin:0;color:#e8efe9;font-size:13px}
+.tag{position:absolute;right:16px;bottom:16px;background:#fff;color:#1B2B24;font-weight:700;border-radius:12px;padding:10px 16px;box-shadow:0 6px 18px rgba(0,0,0,.15);font-size:15px}
+section{padding:56px 0}section.wrap{padding:56px 20px}
+h2{font-size:clamp(28px,4vw,40px);line-height:1.1;letter-spacing:-.02em;margin:12px 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.card h3{margin:0 0 6px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:15px}
+.two{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:start}
+ul.list{padding-left:20px}ul.list li{margin:7px 0}
+.dark{background:var(--dark);color:#fff;border-radius:26px;padding:28px}
+.dark .price{font-size:54px;font-weight:900;letter-spacing:-.03em;line-height:1}
+.dark ul{padding-left:20px;margin:14px 0 20px}.dark li{margin:7px 0}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}
+.step b{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--gold);color:#1B2B24;margin-bottom:10px}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:10px 0}
+summary{cursor:pointer;font-weight:700}
+details p{margin:10px 0 0;color:var(--muted)}
+.reg{background:var(--tint)}
+.formgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:34px;align-items:start}
+.note{background:#FFEFE6;border-left:4px solid #F0866A;border-radius:6px;padding:12px 14px;font-size:14px;color:#3a2a22;margin-top:16px}
+form{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+label{display:block;font-weight:700;font-size:14px;margin:14px 0 6px}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--bg);color:var(--text)}
+.two2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#ok{display:none;background:var(--lime);color:#183029;border-radius:12px;padding:16px;margin-top:16px;font-weight:700}
+footer{padding:26px 0 36px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+@media(max-width:820px){.hero,.two,.formgrid{grid-template-columns:1fr}.cards,.steps{grid-template-columns:1fr 1fr}.two2{grid-template-columns:1fr}}
+@media(max-width:520px){.cards,.steps{grid-template-columns:1fr}nav{gap:12px}}
+</style>
+</head>
+<body>
+<div class="top">A proposed programme for practical skills and job creation in Berekum, Ghana</div>
+<header><div class="wrap nav">
+  <a class="logo" href="#top" data-go="top"><i>✳</i><span><b>BraidSkills Ghana</b><small>SKILLS THAT OPEN DOORS</small></span></a>
+  <nav>
+    <a href="#about" data-go="about">About</a><a href="#training" data-go="training">Training</a><a href="#how" data-go="how">How it works</a><a href="#faqs" data-go="faqs">FAQs</a>
+    <a class="btn" href="#register" data-go="register">Register interest</a>
+  </nav>
+</div></header>
+
+<main id="top">
+<div class="wrap hero">
+  <div>
+    <span class="pill">Learn a skill. Build your future.</span>
+    <h1>Make your skill the start of <span>something bigger.</span></h1>
+    <p>BraidSkills Ghana is an affordable hair-braiding training programme for young people in Berekum who want to learn a practical skill and earn their own income.</p>
+    <div class="row"><a class="btn" href="#register" data-go="register">I’m interested ↗</a><a class="btn out" href="#training" data-go="training">Explore the programme</a></div>
+    <p class="small">Training fee: GH₵500. Training length: 3 months, 3 days a week. A low-cost hostel is planned. <span class="new">Updated</span></p>
+  </div>
+  <div class="art"><div class="arch"><h3>Practical skills.<br>Real possibilities.</h3><p>Hair braiding • Confidence • Business basics</p></div><div class="tag">Training fee: GH₵500</div></div>
+</div>
+
+<section id="about" class="wrap">
+  <span class="pill">About</span>
+  <h2>Why BraidSkills Ghana?</h2>
+  <p class="small" style="font-size:16px;max-width:640px">Young people in Berekum told us that high training prices and transport costs keep them at home. We built this programme to remove those barriers.</p>
+  <div class="cards">
+    <div class="card"><h3>Affordable</h3><p>One fixed fee of GH₵500, so you know the cost before you join.</p></div>
+    <div class="card"><h3>Close to home <span class="new">Updated</span></h3><p>Training in Berekum, with a low-cost hostel planned for learners who live far away.</p></div>
+    <div class="card"><h3>Built for earning</h3><p>You learn braiding, pricing, customer care and how to find your first customers.</p></div>
+  </div>
+</section>
+
+<section id="training" class="wrap">
+  <div class="two">
+    <div>
+      <span class="pill">The offer</span>
+      <h2>One practical skill can open a door.</h2>
+      <p class="small" style="font-size:16px">Learn by doing, with guided practice and simple business lessons.</p>
+      <h3>What’s included <span class="new">Updated</span></h3>
+      <ul class="list">
+        <li>Guided hair-braiding practice</li>
+        <li>Practice tools and materials</li>
+        <li>Customer care and pricing lessons</li>
+        <li>Ideas for finding your first customers</li>
+        <li>Encouragement to start your own work</li>
+      </ul>
+      <p class="small">Final details are confirmed before the first class.</p>
+    </div>
+    <div class="dark">
+      <span class="pill" style="background:var(--lime);color:#183029">Training fee</span>
+      <div class="price" style="margin-top:14px">GH₵500</div>
+      <p style="color:#d6e1da">One fixed fee for the whole training.</p>
+      <ul>
+        <li><b>Length:</b> 3 months, 3 days a week <span class="new">Updated</span></li>
+        <li><b>Hostel:</b> low-cost, small fee, planned <span class="new">Updated</span></li>
+        <li><b>Tools and materials:</b> practice tools included</li>
+        <li>Registering interest does not guarantee a place</li>
+      </ul>
+      <a class="btn lime" href="#register" data-go="register">Register your interest</a>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="wrap">
+  <span class="pill">How it works</span>
+  <h2>Four simple steps</h2>
+  <div class="steps">
+    <div class="step"><b>1</b><h3>Register interest</h3><p class="small">Fill in the short form below.</p></div>
+    <div class="step"><b>2</b><h3>We contact you</h3><p class="small">We share the start date and place.</p></div>
+    <div class="step"><b>3</b><h3>Learn by doing</h3><p class="small">Practise braiding with a trainer.</p></div>
+    <div class="step"><b>4</b><h3>Start earning</h3><p class="small">Use your skill and your business lessons.</p></div>
+  </div>
+</section>
+
+<section id="faqs" class="wrap">
+  <span class="pill">FAQs</span>
+  <h2>Questions people ask</h2>
+  <details><summary>How much does it cost?</summary><p>The training fee is GH₵500. The hostel, if you need it, has a separate small fee that will be confirmed.</p></details>
+  <details><summary>How long is the training? <span class="new">Updated</span></summary><p>3 months, 3 days a week. We will confirm the days and times before the first class.</p></details>
+  <details><summary>Do I need to know braiding already?</summary><p>No. Beginners are welcome. If you already braid, you can still learn pricing and how to find customers.</p></details>
+  <details><summary>I live far away. Can I stay near the training? <span class="new">Updated</span></summary><p>We plan a safe, low-cost hostel near the training. Learners under 18 will need a parent’s or guardian’s permission.</p></details>
+  <details><summary>Is my place guaranteed if I register interest?</summary><p>No. Registering interest only helps us plan. We will contact you with the next steps.</p></details>
+</section>
+
+<section id="register" class="reg"><div class="wrap formgrid">
+  <div>
+    <span class="pill" style="background:var(--card)">Take the first step</span>
+    <h2>Would you like to learn?</h2>
+    <p class="small" style="font-size:16px">Complete this short form to show interest in the programme and help us understand what young people need.</p>
+    <div class="note"><b>Please note:</b> BraidSkills Ghana has not launched yet. This is a prototype for a student project, not a confirmed enrolment form.</div>
+  </div>
+  <form id="f" novalidate>
+    <h3 style="margin:0">Register your interest</h3>
+    <div class="two2">
+      <div><label for="n">Full name *</label><input id="n" required placeholder="Your name"></div>
+      <div><label for="a">Age range *</label><select id="a" required><option value="">Choose one</option><option>Under 18</option><option>18 to 24</option><option>25 to 35</option><option>36 or older</option></select></div>
+    </div>
+    <label for="c">Area or community *</label><input id="c" required placeholder="e.g. Berekum">
+    <label for="p">Phone number or email (optional)</label><input id="p" placeholder="Only if you want to be contacted">
+    <label for="l">Have you learned hair braiding before? *</label><select id="l" required><option value="">Choose one</option><option>No, never</option><option>A little</option><option>Yes, I braid already</option></select>
+    <label for="h">Would you need a place to stay (hostel)? <span class="new">Updated</span></label><select id="h"><option value="">Choose one</option><option>Yes</option><option>No</option><option>Maybe</option></select>
+    <label for="w">What would help you most? (optional)</label><textarea id="w" rows="3" placeholder="e.g. affordable fees, tools, flexible times"></textarea>
+    <p id="err" class="small" style="color:#C0392B;display:none">Please fill in the fields marked with *.</p>
+    <button class="btn" type="submit" style="margin-top:18px">Submit interest</button>
+    <div id="ok">Thank you! Your interest is noted for this prototype. Please tell us what you think of this page.<br><a id="fb" href="#" target="_blank" rel="noopener" style="display:none;margin-top:10px">Give feedback (2 minutes) →</a></div>
+    <p class="small" style="margin-bottom:0">Prototype form only. No personal information is stored or sent.</p>
+  </form>
+</div></section>
+</main>
+<footer><div class="wrap">BraidSkills Ghana is a proposed programme and a student project. Details such as fees, dates and hostel arrangements may change.</div></footer>
+
+<script>
+// Put your Google Form link between the quotes to show a feedback button after the form is submitted.
+var FEEDBACK_URL = "";
+document.querySelectorAll("[data-go]").forEach(function(a){
+  a.addEventListener("click",function(e){
+    e.preventDefault();
+    var t=document.getElementById(a.getAttribute("data-go"));
+    if(t){t.scrollIntoView({behavior:"smooth",block:"start"});}
+  });
+});
+var f=document.getElementById("f");
+f.addEventListener("submit",function(e){
+  e.preventDefault();
+  var ok=["n","a","c","l"].every(function(id){return document.getElementById(id).value.trim()!==""});
+  document.getElementById("err").style.display=ok?"none":"block";
+  if(!ok){return;}
+  var box=document.getElementById("ok");box.style.display="block";
+  if(FEEDBACK_URL){var l=document.getElementById("fb");l.href=FEEDBACK_URL;l.style.display="inline-block";}
+  f.reset();
+});
+</script>
+</body>
+</html>
